@@ -16,11 +16,11 @@
     name: "{{ gitlab_dependencies }}"
     state: present
 
-- name: Install GitLab dependencies (Debian).
+- name: Install GitLab dependencies (Ubuntu).
   apt:
     name: gnupg2
     state: present
-  when: ansible_os_family == 'Debian'
+  when: ansible_os_family == 'Ubuntu'
 
 - name: Download GitLab repository installation script.
   get_url:
