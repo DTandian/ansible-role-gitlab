@@ -10,7 +10,7 @@
   stat: path=/usr/bin/gitlab-ctl
   register: gitlab_file
 
-# Install GitLab and its dependencies.
+# Install GitLab and its dependencies. => install dependencies defined in defaults
 - name: Install GitLab dependencies.
   package:
     name: "{{ gitlab_dependencies }}"
